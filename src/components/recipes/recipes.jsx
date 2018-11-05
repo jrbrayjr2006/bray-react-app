@@ -1,13 +1,14 @@
-import React, { Component } from 'react';
-import recipes from './recipes.css';
+import React from 'react';
+import './recipes.css';
 
-export class Recipes extends Component {
+const recipes = (props) => {
 
-    render() {
-        return (
+    return (
+        <div>
             <h2>My Recipes</h2>
-        );
-    }
+            <button onClick={props.click}>Show Text</button>
+        </div>
+    );
 }
 
-export default Recipes;
+export default recipes;

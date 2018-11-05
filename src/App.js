@@ -5,14 +5,18 @@ import Ingredients from './components/ingredients/ingredients';
 
 class App extends Component {
     state = {
-        someComponent: <Recipes />
+        someComponent: <Recipes click={this.switchComponentHandler} />
     }
 
     myComponent = <Recipes />;
 
-    switchComponentHandler = () => {
+    switchComponentHandler = (event) => {
         console.log('Was clicked!');
         this.setState({someComponent: <Ingredients />});
+    }
+
+    showTextHandler = () => {
+        console.log('showing text...');
     }
 
     render() {
